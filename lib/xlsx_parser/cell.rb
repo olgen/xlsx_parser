@@ -13,9 +13,10 @@ module XlsxParser
     end
 
     private
+    ADDRESS_REGEX = /(\D*)(\d*)/
     def parse_address(address)
       # example address: B2
-      /(\D*)(\d*)/ =~ address
+      ADDRESS_REGEX =~ address
       col = $1
       row = $2.to_i
 

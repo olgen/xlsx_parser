@@ -3,6 +3,7 @@ require 'nokogiri'
 
 module XlsxParser
   class Xlsx
+
     def initialize(filename)
       @workbook = Workbook.new(filename)
       @sheets = []
@@ -14,8 +15,5 @@ module XlsxParser
       @workbook.sheets
     end
 
-
-  private
-    
   end
 end
